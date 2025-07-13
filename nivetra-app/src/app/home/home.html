@@ -1,0 +1,33 @@
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>JEWELRY COLLECTION</h1>
+    <p>Elegance Redefined : Discover the Brilliance of Our Jewelry Collection</p>
+    <button (click)="scrollToSection('bestSellers')" class="explore-btn">Explore Collection</button>
+  </div>
+</div>
+
+<!-- Why Nivetra -->
+<section class="intro">
+  <h2>Why Nivetra?</h2>
+  <p>
+    At Nivetra, we blend tradition and modernity to craft silver jewelry that tells your story.
+    Whether you're buying for yourself or a loved one, every piece is made with care, precision, and passion.
+  </p>
+</section>
+
+<!-- Best Sellers -->
+<section class="bestsellers" #bestSellers>
+  <h2>Best Sellers</h2>
+  <div class="product-grid">
+    <div 
+      class="product-card" 
+      *ngFor="let product of bestSellersList" 
+      (click)="product.id ? viewProduct(product.id) : null"
+    >
+      <img [src]="product.imageUrl" [alt]="product.name" />
+      <h4>{{ product.name }}</h4>
+      <p>₹{{ product.price }}</p>
+    </div>
+  </div>
+</section>

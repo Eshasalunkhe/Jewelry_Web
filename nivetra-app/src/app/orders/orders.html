@@ -1,0 +1,26 @@
+<section class="orders-section">
+  <h2>Your Orders</h2>
+
+  <table class="orders-table" *ngIf="orders.length > 0; else noOrders">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Total</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>₹{{ order.total }}</td>
+        <td>{{ order.orderDate | date: 'mediumDate' }}</td>
+        <td>{{ order.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noOrders>
+    <p>You haven't placed any orders yet.</p>
+  </ng-template>
+</section>

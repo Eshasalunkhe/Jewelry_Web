@@ -1,0 +1,6 @@
+export interface User {
+  id?: number;           // optional, backend will auto-generate
+  name: string;
+  email: string;
+  password: string;
+}

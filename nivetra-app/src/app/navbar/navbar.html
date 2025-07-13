@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">Nivetra</a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/products">Products</a></li>
+    <li><a routerLink="/cart">Cart</a></li>
+
+    <li *ngIf="!user"><a routerLink="/signup">Signup</a></li>
+    <li *ngIf="!user"><a routerLink="/login">Login</a></li>
+    <li *ngIf="user"><a routerLink="/orders">My Orders</a></li>
+    <li *ngIf="isAdmin"><a routerLink="/admin">Admin Dashboard</a></li>
+
+
+    <li *ngIf="user"><a (click)="logout()">Logout</a></li>
+    <li *ngIf="user" class="greeting">Hi, {{ user.name }}</li>
+
+  </ul>
+</nav>

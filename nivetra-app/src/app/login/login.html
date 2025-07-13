@@ -1,0 +1,32 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()" class="login-form">
+    <label for="email">Email:</label>
+    <input
+      [(ngModel)]="credentials.email"
+      name="email"
+      id="email"
+      type="email"
+      required
+      placeholder="Enter your email"
+    />
+
+    <label for="password">Password:</label>
+    <input
+      [(ngModel)]="credentials.password"
+      name="password"
+      id="password"
+      type="password"
+      required
+      placeholder="Enter your password"
+    />
+
+    <button type="submit">Login</button>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+
+  <div class="switch">
+    New to Nivetra? <a routerLink="/signup">Create an account</a>
+  </div>
+</div>

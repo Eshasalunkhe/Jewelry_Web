@@ -1,0 +1,38 @@
+.orders-section {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.orders-section h2 {
+  color: #2a9d8f;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+}
+
+.orders-table tr:hover {
+  background-color: #fafafa;
+}
+
+p {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}

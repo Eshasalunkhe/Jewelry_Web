@@ -1,0 +1,89 @@
+<div class="admin-container">
+  <h2>Admin Dashboard</h2>
+
+  <div class="stats">
+    <div class="stat-box clickable" (click)="showOrders = false; showUsers = false">
+      Total Orders: {{ orderCount }}
+    </div>
+    <div class="stat-box clickable" (click)="showOrders = false; showUsers = true">
+      Total Users: {{ userCount }}
+    </div>
+  </div>
+
+  <!-- Add Product Form -->
+  <form class="product-form" (ngSubmit)="addProduct()">
+    <input type="text" placeholder="Product Name" [(ngModel)]="product.name" name="name" required>
+    <input type="text" placeholder="Description" [(ngModel)]="product.description" name="description">
+    <input type="number" placeholder="Price" [(ngModel)]="product.price" name="price" required>
+    <input type="number" placeholder="Quantity" [(ngModel)]="product.quantity" name="quantity">
+    <input type="text" placeholder="Category" [(ngModel)]="product.category" name="category">
+    <input type="text" placeholder="Image URL" [(ngModel)]="product.imageUrl" name="imageUrl" required>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <!-- Success or Error Message -->
+  <p class="message" [class.success]="message.includes('✅')" [class.error]="message.includes('❌') || message.includes('⚠️')">
+    {{ message }}
+  </p>
+
+  <!-- Product Grid -->
+  <h3>Existing Products</h3>
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let p of products">
+      <img [src]="p.imageUrl" [alt]="p.name">
+      <h4>{{ p.name }}</h4>
+      <p>{{ p.description }}</p>
+      <p>₹{{ p.price }}</p>
+      <button *ngIf="p.id !== undefined" (click)="deleteProduct(p.id)">Delete</button>
+    </div>
+  </div>
+
+  <!-- Users Table -->
+  <div *ngIf="showUsers">
+    <h3>All Users</h3>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button *ngIf="user.id !== undefined" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Orders Table -->
+  <div *ngIf="showOrders">
+    <h3>All Orders</h3>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Total</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>₹{{ order.total }}</td>
+          <td>{{ order.orderDate | date }}</td>
+          <td>
+            <button *ngIf="order.id !== undefined" (click)="deleteOrder(order.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

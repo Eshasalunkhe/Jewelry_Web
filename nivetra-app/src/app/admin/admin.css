@@ -1,0 +1,108 @@
+.admin-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #3e1f0d;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  padding: 1rem 2rem;
+  background: #f5e0c3;
+  color: #3e1f0d;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.product-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d2a679;
+  background: #fdf9f4;
+}
+
+.product-form button {
+  padding: 10px;
+  background-color: #3e1f0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: crimson;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #d2a679;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #d2a679;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-table th {
+  background: #f5e0c3;
+  color: #3e1f0d;
+}

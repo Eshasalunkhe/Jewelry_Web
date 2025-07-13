@@ -1,0 +1,108 @@
+.product-section {
+  padding: 40px;
+  background-color: #fdf8f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.product-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-filter button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: 1px solid #a66a39;
+  background-color: #fff3e0;
+  color: #5c3d1e;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.product-filter button.active {
+  background-color: #a66a39;
+  color: white;
+}
+
+.product-filter button:hover {
+  background-color: #b87b4b;
+  color: white;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.product-card {
+  width: 250px;
+  background-color: white;
+  border: 1px solid #e0cfc0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #3b2c1a;
+}
+
+.info .desc {
+  font-size: 14px;
+  color: #6b4e32;
+  margin-bottom: 8px;
+}
+
+.info .price {
+  font-weight: bold;
+  color: #a66a39;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-card button {
+  background-color: #a66a39;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button.buy {
+  background-color: #744c28;
+}
+
+.product-card button:hover {
+  background-color: #8b5e37;
+}
+
+.product-card button.buy:hover {
+  background-color: #5b3920;
+}

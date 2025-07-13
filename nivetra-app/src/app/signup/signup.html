@@ -1,0 +1,28 @@
+<section class="signup-container">
+  <h2>Create Account</h2>
+
+  <form #form="ngForm" (ngSubmit)="signup(form)" class="signup-form" novalidate>
+    <label>Full Name</label>
+    <input [(ngModel)]="user.name" name="name" required minlength="2" #name="ngModel" />
+    <div *ngIf="name.invalid && name.touched" class="error">Name is required</div>
+
+    <label>Email</label>
+    <input [(ngModel)]="user.email" name="email" type="email" required email #email="ngModel" />
+    <div *ngIf="email.invalid && email.touched" class="error">Valid email is required</div>
+
+    <label>Password</label>
+    <input [(ngModel)]="user.password" name="password" type="password" required minlength="8" #password="ngModel" />
+    <div *ngIf="password.invalid && password.touched" class="error">Password must be at least 8 characters</div>
+
+    <button type="submit" [disabled]="form.invalid">Sign Up</button>
+  </form>
+
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div class="switch">
+    Already have an account?
+    <a routerLink="/login">Login here</a>
+  </div>
+</section>
+
