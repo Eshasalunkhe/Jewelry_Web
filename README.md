@@ -1,12 +1,6 @@
 🛍️ NIVETRA – Silver Jewelry Shopping Web App
 Nivetra is a full-stack ecommerce platform for browsing, buying, and managing silver jewelry products. The platform supports both user functionalities (shopping, cart, checkout) and admin functionalities (product/user/order management).
 
-## 🔗 Live Preview
-
-- **Frontend**: [http://localhost:4200](http://localhost:4200)  
-- **Backend**: [http://localhost:8081](http://localhost:8081)
-
----
 
 ## 🧩 Tech Stack
 
