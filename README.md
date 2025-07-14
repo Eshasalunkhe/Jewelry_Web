@@ -1,66 +1,63 @@
 🛍️ NIVETRA – Silver Jewelry Shopping Web App
 Nivetra is a full-stack ecommerce platform for browsing, buying, and managing silver jewelry products. The platform supports both user functionalities (shopping, cart, checkout) and admin functionalities (product/user/order management).
 
-🔗 Live Preview
-Local: http://localhost:4200
+## 🔗 Live Preview
 
-Backend: http://localhost:8081
+- **Frontend**: [http://localhost:4200](http://localhost:4200)  
+- **Backend**: [http://localhost:8081](http://localhost:8081)
 
-🧩 Tech Stack
-Layer	Tech Used
-Frontend	Angular (v16+), TypeScript, HTML, CSS
-Backend	Spring Boot (v3+), Java
-Database	MySQL / H2
-Tools	Postman, VS Code, Git, Spring DevTools
+---
 
-🧑‍💻 Features
-👤 User Features:
-Sign up / Login with role-based access (USER or ADMIN)
+## 🧩 Tech Stack
 
-View best-selling products on homepage
+| Layer       | Technologies Used                       |
+|-------------|------------------------------------------|
+| Frontend    | Angular (v16+), TypeScript, HTML, CSS    |
+| Backend     | Spring Boot (v3+), Java                  |
+| Database    | MySQL / H2                               |
+| Tools       | Postman, VS Code, Git, Spring DevTools   |
 
-Browse products by category
+---
 
-Add products to cart
+## 🧑‍💻 Features
 
-Checkout using COD or Razorpay
+### 👤 User Features
 
-View placed orders in "My Orders"
+- Sign Up / Login with role-based access (`USER` or `ADMIN`)
+- View best-selling products on the homepage
+- Browse products by category
+- Add products to cart
+- Checkout using **COD** or **Razorpay**
+- View orders in **My Orders**
 
-🛒 Cart Features:
-Add multiple products with quantity
+### 🛒 Cart Features
 
-Delete from cart
+- Add multiple products with quantity
+- Delete specific items from cart
+- Automatically clears after placing an order
 
-Clear cart after placing order
+### 📦 Order Features
 
-📦 Order Features
-Checkout from single product or full cart
+- Checkout from a single product or full cart
+- Order includes total, date, and status
+- View user-specific order history
 
-Place order with total, date, and status
+### 🔐 Admin Panel
 
-View order history (user-specific)
+- Login with role: `ADMIN`
+- Admin Dashboard:
+  - ✅ Total Users
+  - ✅ Total Orders
+  - ✅ Add / Delete Products
+  - ✅ View / Delete Users
+  - ✅ View / Delete Orders
 
-🔐 Admin Panel
-Login as admin using role: ADMIN
+---
 
-Dashboard showing:
+## 📁 Project Structure
 
-Total Users
+### 🔙 Backend - Spring Boot (`/src/main/java/com/example/Nivetra`)
 
-Total Orders
-
-Add / Delete Products
-
-View / Delete Users
-
-View / Delete Orders
-
-📁 Folder Structure
-🔙 Backend - Spring Boot (/src/main/java/com/example/Nivetra)
-pgsql
-Copy
-Edit
 ├── Controller
 │   ├── AdminController.java
 │   ├── CartItemController.java
@@ -83,10 +80,10 @@ Edit
 │
 ├── Config
 │   └── SecurityConfig.java, WebConfig.java
-💅 Frontend - Angular (/src/app)
-pgsql
-Copy
-Edit
+
+
+### 💅 Frontend - Angular (`/src/app`)
+
 ├── app/
 │   ├── admin/
 │   ├── cart/
@@ -104,54 +101,67 @@ Edit
 │   └── footer/
 
 
-🧪 API Endpoints
-🔑 Auth
-Endpoint	Method	Description
-/api/users/register	POST	Register user
-/api/users/login	POST	Login user
+---
 
-📦 Product
-Endpoint	Method	Description
-/api/products	GET	Get all products
-/api/products	POST	Add product (admin)
-/api/products/{id}	DELETE	Delete product (admin)
+## 🧪 API Endpoints
 
-🛒 Cart
-Endpoint	Method	Description
-/api/cart	POST	Add to cart
-/api/cart/user/{userId}	GET	Get user cart items
-/api/cart/{id}	DELETE	Remove item
-/api/cart/clear/{id}	DELETE	Clear full cart
+### 🔑 Authentication
 
-🧾 Orders
-Endpoint	Method	Description
-/api/orders	POST	Place new order
-/api/orders/user/{id}	GET	View user-specific orders
+| Method | Endpoint              | Description     |
+|--------|-----------------------|-----------------|
+| POST   | `/api/users/register` | Register user   |
+| POST   | `/api/users/login`    | Login user      |
 
-🛠️ Admin
-Endpoint	Method	Description
-/api/admin/users	GET	Get all users
-/api/admin/orders	GET	Get all orders
-/api/admin/delete-user/{id}	DELETE	Delete user
-/api/admin/delete-order/{id}	DELETE	Delete order
-/api/admin/user-count	GET	Total user count
-/api/admin/order-count	GET	Total order count
+### 📦 Products
 
-🚀 How to Run
-Backend (Spring Boot)
-bash
-Copy
-Edit
+| Method | Endpoint              | Description         |
+|--------|-----------------------|---------------------|
+| GET    | `/api/products`       | Get all products    |
+| POST   | `/api/products`       | Add product (admin) |
+| DELETE | `/api/products/{id}`  | Delete product      |
+
+### 🛒 Cart
+
+| Method | Endpoint                        | Description              |
+|--------|----------------------------------|--------------------------|
+| POST   | `/api/cart`                     | Add to cart              |
+| GET    | `/api/cart/user/{userId}`       | Get cart for a user      |
+| DELETE | `/api/cart/{id}`                | Delete item from cart    |
+| DELETE | `/api/cart/clear/{id}`          | Clear full cart          |
+
+### 📦 Orders
+
+| Method | Endpoint                       | Description              |
+|--------|--------------------------------|--------------------------|
+| POST   | `/api/orders`                 | Place a new order        |
+| GET    | `/api/orders/user/{id}`       | View user orders         |
+
+### 🛠️ Admin Panel
+
+| Method | Endpoint                          | Description          |
+|--------|-----------------------------------|----------------------|
+| GET    | `/api/admin/users`               | Get all users        |
+| GET    | `/api/admin/orders`              | Get all orders       |
+| DELETE | `/api/admin/delete-user/{id}`    | Delete a user        |
+| DELETE | `/api/admin/delete-order/{id}`   | Delete an order      |
+| GET    | `/api/admin/user-count`          | Total user count     |
+| GET    | `/api/admin/order-count`         | Total order count    |
+
+---
+
+## 🚀 How to Run Locally
+
+### Backend (Spring Boot)
+
+```bash
 cd backend
 ./mvnw spring-boot:run
-Frontend (Angular)
-bash
-Copy
-Edit
+
+For Frontend
 cd frontend
 npm install
 ng serve
-📷 Screenshots to Showcase
+
 
 
 ✅ Homepage
@@ -160,7 +170,8 @@ ng serve
 <img width="1883" height="915" alt="image" src="https://github.com/user-attachments/assets/35eaeb87-97ef-4599-ac09-be11c38a802f" />
 
 ✅ Product listing (with Add to Cart / Buy Now)
-<img width="1901" height="897" alt="image" src="https://github.com/user-attachments/assets/a239bb5f-fd53-44f6-adb6-d13570651410" />
+<img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/f1ef3c91-5f1d-4408-9e17-52ba43a84460" />
+
 
 
 ✅ Cart page with all items
@@ -176,6 +187,15 @@ ng serve
 
 ✅ Admin Dashboard:
 <img width="1900" height="917" alt="image" src="https://github.com/user-attachments/assets/860d0cbc-226b-4d41-91ec-254b30fce74f" />
+
+🌱 How to Fork & Contribute
+1.	Fork this repository
+2. Clone your forked repo
+git clone https://github.com/YOUR_USERNAME/nivetra.git
+cd nivetra
+3. Set up backend (backend/) and frontend (frontend/) as explained above
+4. Make your changes, commit and push
+5. Open a Pull Request on GitHub
 
 
 
