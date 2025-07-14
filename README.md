@@ -47,7 +47,7 @@ Nivetra is a full-stack ecommerce platform for browsing, buying, and managing si
   - ✅ View / Delete Orders
 
 ---
-
+---
 ## 📁 Project Structure
 
 ### 🔙 Backend - Spring Boot (`/src/main/java/com/example/Nivetra`)
