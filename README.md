@@ -128,7 +128,7 @@ nivetra-frontend/
 │       ├── navbar/
 │       └── footer/
 
-
+```
 ---
 
 ## 🧪 API Endpoints
