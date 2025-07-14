@@ -52,47 +52,82 @@ Nivetra is a full-stack ecommerce platform for browsing, buying, and managing si
 
 ### 🔙 Backend - Spring Boot (`/src/main/java/com/example/Nivetra`)
 
-├── Controller
-│   ├── AdminController.java
-│   ├── CartItemController.java
-│   ├── HomeController.java
-│   ├── OrderController.java
-│   └── ProductController.java
-│
-├── Model
-│   ├── Product.java
-│   ├── User.java
-│   ├── Order.java
-│   ├── OrderItem.java
-│   └── CartItem.java
-│
-├── Repository
-│   └── [Product, User, Order, CartItem]Repository.java
-│
-├── Service
-│   └── [Product, User, Admin, Order, CartItem]Service.java
-│
-├── Config
-│   └── SecurityConfig.java, WebConfig.java
+Nivetra-Backend/
+├── src/
+│   └── main/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── Nivetra/
+│                       ├── controller/
+│                       │   ├── AdminController.java
+│                       │   ├── CartItemController.java
+│                       │   ├── HomeController.java
+│                       │   ├── OrderController.java
+│                       │   └── ProductController.java
+│                       │
+│                       ├── model/
+│                       │   ├── Product.java
+│                       │   ├── User.java
+│                       │   ├── Order.java
+│                       │   ├── OrderItem.java
+│                       │   └── CartItem.java
+│                       │
+│                       ├── repository/
+│                       │   ├── ProductRepository.java
+│                       │   ├── UserRepository.java
+│                       │   ├── OrderRepository.java
+│                       │   └── CartItemRepository.java
+│                       │
+│                       ├── service/
+│                       │   ├── ProductService.java
+│                       │   ├── UserService.java
+│                       │   ├── AdminService.java
+│                       │   ├── OrderService.java
+│                       │   └── CartItemService.java
+│                       │
+│                       └── config/
+│                           ├── SecurityConfig.java
+│                           └── WebConfig.java
+
 
 
 ### 💅 Frontend - Angular (`/src/app`)
 
-├── app/
-│   ├── admin/
-│   ├── cart/
-│   ├── checkout/
-│   ├── home/
-│   ├── login/
-│   ├── signup/
-│   ├── products/
-│   ├── services/
-│   ├── models/
-│   ├── contact-us/
-│   ├── about-us/
-│   ├── orders/
-│   ├── navbar/
-│   └── footer/
+
+nivetra-frontend/
+├── src/
+│   └── app/
+│       ├── admin/
+│       │   ├── dashboard/
+│       │   └── manage-products/
+│
+│       ├── cart/
+│       ├── checkout/
+│       ├── home/
+│       ├── login/
+│       ├── signup/
+│       ├── products/
+│       ├── orders/
+│       ├── about-us/
+│       ├── contact-us/
+│
+│       ├── models/
+│       │   ├── user.model.ts
+│       │   ├── product.model.ts
+│       │   ├── order.model.ts
+│       │   ├── cart.model.ts
+│       │   └── order-item.model.ts
+│
+│       ├── services/
+│       │   ├── user.service.ts
+│       │   ├── product.service.ts
+│       │   ├── cart.service.ts
+│       │   ├── order.service.ts
+│       │   └── admin.service.ts
+│
+│       ├── navbar/
+│       └── footer/
 
 
 ---
