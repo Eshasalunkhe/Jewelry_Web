@@ -163,6 +163,8 @@ npm install
 ng serve
 
 
+Screenshots:
+
 
 ✅ Homepage
 <img width="1893" height="913" alt="image" src="https://github.com/user-attachments/assets/a7bd8b69-880a-4ec1-a912-b9372da7eb99" />
@@ -170,7 +172,7 @@ ng serve
 <img width="1883" height="915" alt="image" src="https://github.com/user-attachments/assets/35eaeb87-97ef-4599-ac09-be11c38a802f" />
 
 ✅ Product listing (with Add to Cart / Buy Now)
-<img width="1905" height="910" alt="image" src="https://github.com/user-attachments/assets/f1ef3c91-5f1d-4408-9e17-52ba43a84460" />
+<img width="1870" height="928" alt="image" src="https://github.com/user-attachments/assets/28aec874-e4ba-4ce7-bfe7-1885998ab0ee" />
 
 
 
@@ -188,6 +190,7 @@ ng serve
 ✅ Admin Dashboard:
 <img width="1900" height="917" alt="image" src="https://github.com/user-attachments/assets/860d0cbc-226b-4d41-91ec-254b30fce74f" />
 
+
 🌱 How to Fork & Contribute
 1.	Fork this repository
 2. Clone your forked repo
@@ -196,8 +199,6 @@ cd nivetra
 3. Set up backend (backend/) and frontend (frontend/) as explained above
 4. Make your changes, commit and push
 5. Open a Pull Request on GitHub
-
-
 
 🙋‍♀️ Created By
 Nivetra Web App by Esha Salunkhe
